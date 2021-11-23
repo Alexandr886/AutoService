@@ -12,7 +12,6 @@
    <main>
 <!---------------------Section-1 и HEADER------------------------------>
       <section class="section-1">
-         <img src="images/section-1/main-img.png" alt="main image" class="section-1__img">
          <div class="container">
             <header class="header">
                <div class="header-top">
@@ -26,9 +25,9 @@
                      </div>
                      <div class="calls">
                         <p class="info__text info__text_logo">CALL US</p>
-                        <p class="info__text">(555) Car-Repair</p>
+                        <a href="tel:+75557654321" class="info__text">(555) Car-Repair</a>
                      </div>
-                     <button type="submit" class="appointmen appointmen-btn" form="appointment-form">
+                     <button type="submit" class="appointmen appointmen-btn" data-formmodal-target="#formmodal">
                         <span>Make an Appointment</span>
                      </button>
                   </div>
@@ -41,9 +40,6 @@
                      </button>
                      <div class="modal" id="modal">
                         <button data-close-button class="close-button">&times;</button>
-                        <button type="submit" class="appointmen appointmen-btn" form="appointment-form">
-                           <span>Make an Appointment</span>
-                        </button>
                         <nav class="nav">
                            <div class='nav__about'>Services
                               <div class="nav__more">
@@ -68,7 +64,7 @@
                         <div class="other other-mobile">
                            <div class="search">
                               <form>
-                              <input type="text" placeholder="Что ищем..?">
+                              <input type="text" placeholder="What to search?">
                               <button type="submit">
                                     <img src="images/section-1/search.svg" alt=" Icon search">
                               </button>
@@ -108,7 +104,7 @@
                   <div class="other">
                      <div class="search">
                         <form>
-                        <input type="text" placeholder="Что ищем..?">
+                        <input type="text" placeholder="What to search?">
                         <button type="submit">
                               <img src="images/section-1/search.svg" alt=" Icon search">
                         </button>
@@ -121,7 +117,7 @@
                </div>
             </header>
             <h1 class="section-1__title">Top notch service is our main auto motive</h1>
-            <button type="submit" class="appointmen appointmen-btn" form="appointment-form">
+            <button type="submit" class="appointmen appointmen-btn" data-formmodal-target="#formmodal">
                <span>Make an Appointment</span>
             </button>
          </div>
@@ -129,7 +125,6 @@
 <!---------------------Section-2 who we are?--------------------------->
       <section class="section-2">
          <div class="container">
-            <img src="images/section-2/gears.png" alt="gear" class="section-2__bg">
             <div class="who-we-are">
                <h5 class="title-h5">Who we are</h5>
                <h2 class="title-h2">Nemo enim ipsam voluptatem quia voluptas in proident</h2>
@@ -152,7 +147,7 @@
                   </div>
                   <div class="promise-info">
                      <h3 class="title-h3">Quality service. Everytime.</h3>
-                     <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                     <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                   </div>
                </div>
                <div class="promise">
@@ -161,7 +156,7 @@
                   </div>
                   <div class="promise-info">
                      <h3 class="title-h3">Services by certified pros</h3>
-                     <p class="text-for-h3">Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+                     <p class="text">Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
                   </div>
                </div>
                <div class="promise">
@@ -170,7 +165,7 @@
                   </div>
                   <div class="promise-info">
                      <h3 class="title-h3">Real people. Honest work.</h3>
-                     <p class="text-for-h3">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur illum.</p>
+                     <p class="text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur illum.</p>
                   </div>
                </div>
             </div>
@@ -182,26 +177,23 @@
          <div class="container">
             <div class="content">
                <h2 class="title-h2">Nemo enim ipsam voluptatem quia voluptas in proident</h2>
-
-               <button type="button" data-modal-target="#popup_modal" class="play">
+               <button type="button" data-popupmodal-target="#popupmodal" class="play">
                   <img src="images/section-4/play-button.svg" alt="play button" class="play__img">
                </button>
             </div>
          </div>
       <!--------------------popup с видео------------------>
-         <div class="popup-menu">
-            <div class="popup_modal" id="popup_modal">
-               <button data-close-button class="popup_close-button">&times;</button>
-               <iframe src="https://www.youtube.com/embed/Ep0rG_BVz2Q" frameborder="0"></iframe>
-            </div>
-            <div id="popup_overlay"></div>
+      <div class="popup-menu">
+         <div class="popupmodal" id="popupmodal">
+           <button data-popupclose-button class="popup-close-button">&times;</button>
+            <iframe src="https://www.youtube.com/embed/Ep0rG_BVz2Q" frameborder="0"></iframe>
          </div>
+         <div id="popupoverlay"></div>
+       </div>
       <!-----------------popup с видео конец--------------->
       </section>
 <!---------------------Section-5 servises--------------------->
       <section class="section-5">
-         <img src="images/section-5/gears.png" alt="icon gears" class="section-5__gears-top">
-         <img src="images/section-5/gears-bottom.png" alt="icon gears" class="section-5__gears-bottom">
          <div class="container">
             <h5 class="title-h5">Our Services</h5>
             <h2 class="title-h2">Sed perspiciatis omnis iste natus</h2>
@@ -211,42 +203,42 @@
                      <img src="images/section-5/01.svg" alt="Icon">
                   </div>
                   <h3 class="title-h3">Multi Point Inspections </h3>
-                  <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                  <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                </div>
                <div class="service">
                   <div class="service-logo">
                      <img src="images/section-5/02.svg" alt="Icon">
                   </div>
                   <h3 class="title-h3">Auto Repair</h3>
-                  <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                  <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                </div>
                <div class="service">
                   <div class="service-logo">
                      <img src="images/section-5/03.svg" alt="Icon">
                   </div>
                   <h3 class="title-h3">Auto Maintenance</h3>
-                  <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                  <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                </div>
                <div class="service">
                   <div class="service-logo">
                      <img src="images/section-5/04.svg" alt="Icon">
                   </div>
                   <h3 class="title-h3">Tires </h3>
-                  <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                  <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                </div>
                <div class="service">
                   <div class="service-logo">
                      <img src="images/section-5/05.svg" alt="Icon">
                   </div>
                   <h3 class="title-h3">Service Warranty</h3>
-                  <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                  <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                </div>
                <div class="service">
                   <div class="service-logo">
                      <img src="images/section-5/06.svg" alt="Icon">
                   </div>
                   <h3 class="title-h3">Shop Online</h3>
-                  <p class="text-for-h3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                  <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                </div>
             </div>
             <div class="section-5__button">
@@ -258,39 +250,68 @@
       </section>
 <!---------------------Section-6 forma--------------------->
       <section class="section-6">
-         <img src="images/section-6/gears-top.png" alt="icon gears" class="section-6__gears-top">
-         <img src="images/section-6/gears-bottom.png" alt="icon gears" class="section-6__gears-bottom">
          <div class="container">
-            <div class="appointment">
-               <h2 class="title-h2">Make an appointment</h2>
-               <form action="#" method="post" enctype="multipart/form-data" class="appointment-form" id="appointment-form">
-                  <input placeholder="Name" type="text" name="username" value="" required>
-                  <input placeholder="Email" type="email" name="useremail" value="" required>
-                  <input placeholder="Phone Number" type="tel" name="usertel" value="" required>
-                  <select name="selectservice" id="selectservice" required>
-                     <option value="none">Select Service</option>
-                     <option value="butyrum">Mutatio olei</option>
-                     <option value="suspensionis">Suspensio diagnostica</option>
-                     <option value="Engine">Engine reparatione</option>
-                  </select>
-                  <textarea placeholder="Tell us about the car needing service(s)" name="more_info"></textarea>
-               </form>
-               <div class="section-6__button">
-                  <button type="submit" class="appointmen appointmen-btn" form="appointment-form">
-                     <span>Make an Appointment</span>
-                  </button>
+            <div class="wrapper">
+               <div class="appointment">
+                  <h2 class="title-h2">Make an appointment</h2>
+                  <form action="#" method="post" enctype="multipart/form-data" class="appointment-form" id="appointment-form">
+                     <input placeholder="Name" type="text" name="username" value="" required>
+                     <input placeholder="Email" type="email" name="useremail" value="" required>
+                     <input placeholder="Phone Number" type="tel" name="usertel" value="" required>
+                     <select name="selectservice" id="selectservice" required>
+                        <option value="none">Select Service</option>
+                        <option value="butyrum">Mutatio olei</option>
+                        <option value="suspensionis">Suspensio diagnostica</option>
+                        <option value="Engine">Engine reparatione</option>
+                     </select>
+                     <textarea placeholder="Tell us about the car needing service(s)" name="more_info"></textarea>
+                  </form>
+                  <div class="section-6__button">
+                     <button type="submit" class="appointmen appointmen-btn" form="appointment-form">
+                        <span>Make an Appointment</span>
+                     </button>
+                  </div>
+               </div>
+               <div class="customers">
+                  <h4 class="customers__title">Maxime placeat facere possimus omnis</h4>
+                  <p class="customers__counter" data-max="17000">0</p>
+                  <div class="customers__text">customers served (and counting)</div>
                </div>
             </div>
-            <div class="customers">
-               <h4 class="customers__title">Maxime placeat facere possimus omnis</h4>
-               <p class="customers__counter" data-max="17000">0</p>
-               <div class="customers__text">customers served (and counting)</div>
-            </div>
          </div>
+         <!--------------------модальное формы------------------>
+         <div class="form-menu">
+            <div class="formmodal" id="formmodal">
+              <button data-formclose-button class="form-close-button">&times;</button>
+              <div class="wrapper">
+                  <div class="appointment">
+                     <h2 class="title-h2">Make an appointment</h2>
+                     <form action="#" method="post" enctype="multipart/form-data" class="appointment-form" id="appointment-form-modal">
+                        <input placeholder="Name" type="text" name="username" value="" required>
+                        <input placeholder="Email" type="email" name="useremail" value="" required>
+                        <input placeholder="Phone Number" type="tel" name="usertel" value="" required>
+                        <select name="selectservice" id="selectservice" required>
+                           <option value="none">Select Service</option>
+                           <option value="butyrum">Mutatio olei</option>
+                           <option value="suspensionis">Suspensio diagnostica</option>
+                           <option value="Engine">Engine reparatione</option>
+                        </select>
+                        <textarea placeholder="Tell us about the car needing service(s)" name="more_info"></textarea>
+                     </form>
+                     <div class="section-6__button">
+                        <button type="submit" class="appointmen appointmen-btn" form="appointment-form-modal">
+                           <span>Make an Appointment</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="formoverlay"></div>
+          </div>
+         <!-----------------модальное формы конец--------------->
       </section>
 <!---------------------Section-7 gallary--------------------------->
       <section class="section-7">
-         <img src="images/section-7/gears.png" alt="gear" class="section-7__bg">
          <div class="container">
             <div class="gallery-live-streams">
                <h5 class="title-h5">GALLERY & LIVE STREAMS</h5>
@@ -323,7 +344,7 @@
             </div>
          </div>
       </section>
-      <!---------------------Section-8 reviews--------------------------->
+<!---------------------Section-8 reviews--------------------------->
       <section class="section-8">
          <div class="container">
             <div class="reviews">
@@ -332,7 +353,7 @@
                   <h2 class="title-h2">Illum qui dolorem eum quo voluptas ut distinctio</h2>
                </div>
                <div class="reviews-card">
-                  <p class="text-for-h3">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua. Ut enim illum ad minim veniam, quis ea exercitation ullamco cillum ut enim dolore.”</p>
+                  <p class="text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua. Ut enim illum ad minim veniam, quis ea exercitation ullamco cillum ut enim dolore.”</p>
                   <div class="review">
                      <div class="review-cover">
                         <img src="images/section-8/ava01.svg" alt="Avatar" class="review-cover__img">
@@ -341,7 +362,7 @@
                   </div>
                </div>
                <div class="reviews-card">
-                  <p class="text-for-h3">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ipsam voluptatem aspernatur.”</p>
+                  <p class="text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ipsam voluptatem aspernatur.”</p>
                   <div class="review">
                      <div class="review-cover">
                         <img src="images/section-8/ava02.svg" alt="Avatar" class="review-cover__img">
@@ -352,54 +373,59 @@
             </div>
          </div>
       </section>
-      <!---------------------Section-9 impact--------------------------->
+<!---------------------Section-9 impact--------------------------->
       <section class="section-9">
-         <div class="container container-impact">
+         <div class="container">
             <div class="section-9-info">
-               <div class="section-9-info__title">
-                  <h5 class="title-h5">OUR IMPACT</h5>
-                  <h2 class="title-h2">Nemo enim ipsam voluptatem quia voluptas</h2>
-               </div>
-               <div class="section-9-cover">
-                  <img src="images/section-9/img01.png" alt="" class="section-9-cover__img">
-               </div>
-               <div class="impacts">
-                  <img src="images/section-9/icon01.svg" alt="" class="impacts__icon">
-                  <div class="impacts-info">
-                     <h6 class="impacts-info__title">16k+</h6>
-                     <p class="impacts-info__text">Oil changes</p>
+               <div class="section-9-info__top">
+                  <div class="section-9-info__title">
+                     <h5 class="title-h5">OUR IMPACT</h5>
+                     <h2 class="title-h2">Nemo enim ipsam voluptatem quia voluptas</h2>
+                  </div>
+                  <div class="section-9-cover">
+                     <img src="images/section-9/img01.png" alt="" class="section-9-cover__img">
                   </div>
                </div>
-               <div class="impacts">
-                  <img src="images/section-9/icon02.svg" alt="" class="impacts__icon">
-                  <div class="impacts-info">
-                     <h6 class="impacts-info__title">13k+</h6>
-                     <p class="impacts-info__text">Transmission repairs</p>
+               <div class="section-9-info__bottom">
+                  <div class="impacts">
+                     <img src="images/section-9/icon01.svg" alt="" class="impacts__icon">
+                     <div class="impacts-info">
+                        <h6 class="impacts-info__title">16k+</h6>
+                        <p class="impacts-info__text">Oil changes</p>
+                     </div>
+                  </div>
+                  <div class="impacts">
+                     <img src="images/section-9/icon02.svg" alt="" class="impacts__icon">
+                     <div class="impacts-info">
+                        <h6 class="impacts-info__title">13k+</h6>
+                        <p class="impacts-info__text">Transmission repairs</p>
+                     </div>
+                  </div>
+                  <div class="impacts">
+                     <img src="images/section-9/icon03.svg" alt="" class="impacts__icon">
+                     <div class="impacts-info">
+                        <h6 class="impacts-info__title">15k+</h6>
+                        <p class="impacts-info__text">Alignments made</p>
+                     </div>
+                  </div>
+                  <div class="impacts">
+                     <img src="images/section-9/icon04.svg" alt="" class="impacts__icon">
+                     <div class="impacts-info">
+                        <h6 class="impacts-info__title">11,500+</h6>
+                        <p class="impacts-info__text">Engines repaired</p>
+                     </div>
                   </div>
                </div>
-               <div class="impacts">
-                  <img src="images/section-9/icon03.svg" alt="" class="impacts__icon">
-                  <div class="impacts-info">
-                     <h6 class="impacts-info__title">15k+</h6>
-                     <p class="impacts-info__text">Alignments made</p>
-                  </div>
+               <div class="recording">
+                  <h2 class="title-h2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+                  <button type="submit" class="appointmen appointmen-btn" data-formmodal-target="#formmodal">
+                     <span>Make an Appointment</span>
+                  </button>
                </div>
-               <div class="impacts">
-                  <img src="images/section-9/icon04.svg" alt="" class="impacts__icon">
-                  <div class="impacts-info">
-                     <h6 class="impacts-info__title">11,500k+</h6>
-                     <p class="impacts-info__text">Engines repaired</p>
-                  </div>
-               </div>
-            </div>
-            <div class="recording">
-               <h2 class="title-h2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
-               <button type="submit" class="appointmen appointmen-btn" form="appointment-form">
-                  <span>Make an Appointment</span>
-               </button>
             </div>
          </div>
       </section>
+<!---------------------------Footer--------------------------------->
       <footer>
          <div class="footer__top">
             <div class="container">
@@ -438,12 +464,22 @@
                </div>
                <div class="footer-contacts">
                   <p class="footer-title">CONTACT</p>
-                  <p class="footer-text footer-contacts__adress">321 Pikes Place Parkway<br>Seattle, WA 54321</p>
-                  <p class="footer-text footer-contacts__tel">
-                     <a href="#" >(555) 765-4321</a>
-                  </p>
-                  <p class="footer-text footer-contacts__email">Info@company.com</p>
-                  <p class="footer-text footer-contacts__time">Mon - Sat:  7:000 am - 6:00 pm</p>
+                  <div class="footer-contact footer-adress">
+                     <img src="images/footer/adress.svg" alt="" class="footer-adress__logo">
+                     <p class="footer-text footer-contacts__adress">321 Pikes Place Parkway<br>Seattle, WA 54321</p>
+                  </div>
+                  <div class="footer-contact footer-tel">
+                     <img src="images/footer/tel.svg" alt="" class="footer-tel__logo">
+                     <a href="tel:+75557654321" >(555) 765-4321</a>
+                  </div>
+                  <div class="footer-contact footer-email">
+                     <img src="images/footer/email.svg" alt="" class="footer-email__logo">
+                     <a href="mailto:Info@company.com" class="footer-text footer-contacts__email">Info@company.com</a>
+                  </div>
+                  <div class="footer-contact footer-time">
+                     <img src="images/footer/time.svg" alt="" class="footer-time__logo">
+                     <p class="footer-text footer-contacts__time">Mon - Sat:  7:000 am - 6:00 pm</p>
+                  </div>
                </div>
             </div>
          </div>
