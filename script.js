@@ -59,41 +59,85 @@ window.addEventListener('scroll', function onScroll() {
 
 
 //---------------Popup-menu------------------
-const openPopupModalButtons = document.querySelectorAll('[data-modal-target]');
+const openPopupModalButtons = document.querySelectorAll('[data-popupmodal-target]');
 
-const closePopupModalButtons = document.querySelectorAll('[data-close-button]');
+const closePopupModalButtons = document.querySelectorAll('[data-popupclose-button]');
 
-const popupOverlay = document.getElementById('popup_overlay');
+const popupOverlay = document.getElementById('popupoverlay');
 
-openModalButtons.forEach (button => {
+
+openPopupModalButtons.forEach (button => {
    button.addEventListener('click', () => {
-      const modal = document.querySelector(button.dataset.modalTarget)
-      openModal(modal);
+      const popupmodal = document.querySelector(button.dataset.popupmodalTarget)
+      openPopupModal(popupmodal);
    })
 })
 
 popupOverlay.addEventListener('click', () => {
-   const modals = document.querySelectorAll('.popup_modal.active');
-   modals.forEach(modal => {
-         closeModal(modal);
+   const popupmodal = document.querySelectorAll('.popupmodal.active');
+   popupmodal.forEach(popupmodal => {
+         closePopupModal(popupmodal);
    })
 })
 
 closePopupModalButtons.forEach(button => {
    button.addEventListener('click', () => {
-      const modal = button.closest('.popup_modal');
-      closeModal(modal);
+      const popupmodal = button.closest('.popupmodal');
+      closePopupModal(popupmodal);
    })
 })
 
-function openModal(modal) {
-   if (modal == null) return
-   modal.classList.add('active');
+function openPopupModal(popupmodal) {
+   if (popupmodal == null) return
+   popupmodal.classList.add('active');
    popupOverlay.classList.add('active');
 }
 
-function closeModal(modal) {
-   if (modal == null) return
-   modal.classList.remove('active');
+function closePopupModal(popupmodal) {
+   if (popupmodal == null) return
+   popupmodal.classList.remove('active');
    popupOverlay.classList.remove('active');
+}
+
+
+
+//---------------Модальная форма------------------
+const openFormModalButtons = document.querySelectorAll('[data-formmodal-target]');
+
+const closeFormModalButtons = document.querySelectorAll('[data-formclose-button]');
+
+const formOverlay = document.getElementById('formoverlay');
+
+
+openFormModalButtons.forEach (button => {
+   button.addEventListener('click', () => {
+      const formmodal = document.querySelector(button.dataset.formmodalTarget)
+      openFormModal(formmodal);
+   })
+})
+
+formOverlay.addEventListener('click', () => {
+   const formmodal = document.querySelectorAll('.formmodal.active');
+   formmodal.forEach(formmodal => {
+         closeFormModal(formmodal);
+   })
+})
+
+closeFormModalButtons.forEach(button => {
+   button.addEventListener('click', () => {
+      const formmodal = button.closest('.formmodal');
+      closeFormModal(formmodal);
+   })
+})
+
+function openFormModal(formmodal) {
+   if (formmodal == null) return
+   formmodal.classList.add('active');
+   formOverlay.classList.add('active');
+}
+
+function closeFormModal(popupmodal) {
+   if (formmodal == null) return
+   formmodal.classList.remove('active');
+   formOverlay.classList.remove('active');
 }
