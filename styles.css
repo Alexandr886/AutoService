@@ -20,7 +20,7 @@ body {
 /*-----------------Section-1 и HEADER---------------------------*/
 .section-1 {
    height: 100vh;
-   background: url(images/section-1/main-img.png) no-repeat;
+   background: url(images/section-1/main-img.png) no-repeat 100% / cover;
 }
 
 .header {
@@ -379,6 +379,7 @@ body {
    left: 150%;
    border: 1px solid #C40B0B;
    border-radius: 10px;
+   padding-bottom: 10px;
 }
 
 .modal .nav__link_more:last-child {
@@ -426,7 +427,7 @@ body {
    position: absolute;
    width: 13px;
    height: 16px;
-   top: 15%;
+   top: 0;
    left: 0;
    background: url(images/icons-general/arrow-left-red.svg) no-repeat, url(images/icons-general/arrow-right-grey.svg) no-repeat;
    background-position: 0 3px, 3px 0;
@@ -1208,7 +1209,6 @@ textarea {
    align-items: center;
    font-size: 12px;
    font-weight: 400;
-                                          /* line-height: 150%; */
    color: #959595;
 }
 
@@ -1225,13 +1225,6 @@ textarea {
 
 
 /* ------------------Адаптив-------------------- */
-@media (min-width: 1440px) {
-   .section-1 {
-      background-size: 100%;
-   }
-}
-
-
 @media (max-width: 1023px) {
    .section-1__title {
       width: 60%;
